@@ -1,16 +1,19 @@
 {
-  "name": "@example/basics",
-  "type": "module",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^1.6.9"
-  }
+	"name": "@example/basics",
+	"type": "module",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"format": "prettier --write . --plugin-search-dir=.",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"astro": "^1.6.9",
+		"prettier": "^2.7.1",
+		"prettier-plugin-astro": "^0.7.0"
+	}
 }

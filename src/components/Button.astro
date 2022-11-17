@@ -1,0 +1,24 @@
+---
+---
+
+<button class="button">
+    <slot />
+</button>
+
+<style>
+    .button {
+        all: unset;
+        padding: 10px;
+        box-shadow: 15px 28px 25px -18px var(--nyanza);
+        border-radius: 0.5em;
+        border: solid var(--turquoise-green) 1.5px;
+        transition: all 235ms ease 0s;
+        font-family: var(--sans);
+        cursor: pointer;
+    }
+
+    .button:hover {
+        box-shadow: 2px 8px 8px -5px var(--nyanza);
+        transform: translate3d(0, 2px, 0);
+    }
+</style>
