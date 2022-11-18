@@ -1,0 +1,42 @@
+---
+import Logo from "./Logo.astro";
+import { Icon } from 'astro-icon'
+
+---
+
+<nav>
+    <div id="left-nav">
+        <a href="/">
+            <Logo size={40}></Logo>
+        </a>
+    </div>
+    <div id="right-nav">
+        <a href="https://github.com/zihan-ch/dreen" target="_blank">
+            <Icon class="nav-icon" name="mdi:github" size="30"></Icon>
+        </a>
+    </div>
+</nav>
+
+<style>
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left-nav, .right-nav {
+        display: flex;
+    }
+
+    [astro-icon] {
+        color: black;
+    }
+
+    .nav-icon {
+        opacity: 0.4;
+        transition: all 0.6s ease;
+    }
+
+    .nav-icon:hover {
+        opacity: 0.8;
+    }
+</style>

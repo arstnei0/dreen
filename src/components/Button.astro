@@ -5,20 +5,41 @@
     <slot />
 </button>
 
+
 <style>
     .button {
         all: unset;
-        padding: 10px;
-        box-shadow: 15px 28px 25px -18px var(--nyanza);
+        padding: 0.6em;
+        box-shadow: 8px 8px 8px -8px var(--cambridge-blue);
         border-radius: 0.5em;
-        border: solid var(--turquoise-green) 1.5px;
         transition: all 235ms ease 0s;
         font-family: var(--sans);
         cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        font-size: 1.3em;
     }
 
     .button:hover {
-        box-shadow: 2px 8px 8px -5px var(--nyanza);
+        box-shadow: 2px 8px 8px -5px var(--cambridge-blue);
         transform: translate3d(0, 2px, 0);
+        background-color: #bfd8bd22;
+    }
+</style>
+
+<style is:global>
+    span.ripple {
+        position: absolute; /* The absolute position we mentioned earlier */
+        border-radius: 50%;
+        transform: scale(0);
+        animation: ripple 600ms linear;
+        background-color: #bfd8bd55;
+    }
+
+    @keyframes ripple {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
     }
 </style>
