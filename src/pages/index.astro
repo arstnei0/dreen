@@ -3,18 +3,17 @@ import Layout from "../layouts/Layout.astro"
 import Card from "../components/Card.astro"
 import Button from "../components/Button.astro";
 import Logo from "components/Logo.astro";
+import Fluff from "components/Fluff.astro";
 ---
 
 <Layout title="Home">
-	<img src="/big-logo.png" width="100%" />
-	<h1>Dreen: An elegant design.</h1>
-	<Card>
-		<p>Does this look good?</p>
-	</Card>
-	<br />
-	<br />
-	<br />
-	<Button>Greet</Button>
+	<div style="display: flex; align-items: center; justify-content: space-between;">
+		<div>
+			<img src="/big-logo.png" width="325" height="100" />
+			<h1>An elegant design.</h1>
+		</div>
+		<Fluff />
+	</div>
 </Layout>
 
 <style>
