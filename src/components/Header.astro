@@ -4,39 +4,70 @@ import { Icon } from 'astro-icon'
 
 ---
 
-<nav>
+<nav class="nav-not-hovering">
     <div id="left-nav">
-        <a href="/">
+        <a href="/" class="nav-item">
             <Logo size={40}></Logo>
         </a>
     </div>
     <div id="right-nav">
-        <a href="https://github.com/zihan-ch/dreen" target="_blank">
-            <Icon class="nav-icon" name="mdi:github" size="30"></Icon>
+        <a class="nav-item" href="/blog">Blog</a>
+        <a class="nav-item" href="/about">About</a>
+        <a class="nav-item" href="https://github.com/zihan-ch/dreen" target="_blank">
+            <Icon name="mdi:github" size="30"></Icon>
         </a>
     </div>
 </nav>
+
+<script lang="ts" defer>
+    const navEl = document.querySelector("nav")
+    ;[...document.getElementsByClassName("nav-item")].forEach(element => {
+        element.addEventListener('mouseenter', (e) => {
+            navEl.classList.replace('nav-not-hovering', 'nav-hovering')
+        })
+
+        element.addEventListener('mouseleave', (e) => {
+            navEl.classList.replace('nav-hovering', 'nav-not-hovering')
+        })
+    });
+</script>
 
 <style>
     nav {
         display: flex;
         justify-content: space-between;
+        font-family: var(--sans);
+        font-weight: 500;
+        font-size: 1.1em;
+        letter-spacing: 0.02em;
     }
 
-    .left-nav, .right-nav {
+    #left-nav, #right-nav {
         display: flex;
+        align-items: center;
     }
 
     [astro-icon] {
         color: black;
     }
 
-    .nav-icon {
-        opacity: 0.4;
-        transition: all 0.6s ease;
+    .nav-item {
+        opacity: 0.7;
+        transition: all 0.6s ease-out;
+        margin-left: 0.6em;
+        margin-right: 0.6em;
     }
 
-    .nav-icon:hover {
-        opacity: 0.8;
+    .nav-item:hover {
+        opacity: 0.9 !important;
+        transform: translateY(-0.08em);
+    }
+
+    .nav-hovering .nav-item {
+        opacity: 0.15;
+    }
+
+    nav a {
+        color: black;
     }
 </style>

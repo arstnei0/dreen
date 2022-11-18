@@ -1,2 +1,6 @@
 @import "./fonts.css";
-@import "./colors.css"
+@import "./colors.css";
+
+a {
+    text-decoration: none;
+}

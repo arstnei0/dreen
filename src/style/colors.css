@@ -1,7 +1,7 @@
 :root {
-    --pale-spring-bud: #edeec9ff;
-    --pale-spring-bud-2: #dde7c7ff;
-    --cambridge-blue: #bfd8bdff;
-    --eton-blue: #98c9a3ff;
-    --eton-blue-2: #77bfa3ff;
+    --gsl: #edeec9ff; /* Green super light */
+    --gl: #dde7c7ff; /* Green light */
+    --gm: #bfd8bdff; /* Green medium */
+    --gd: #98c9a3ff; /* Green dark */
+    --gsd: #77bfa3ff; /* Green super dark */
 }
