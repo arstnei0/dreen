@@ -4,6 +4,7 @@ import Card from "../components/Card.astro"
 import Button from "../components/Button.astro";
 import Logo from "components/Logo.astro";
 import Fluff from "components/Fluff.astro";
+import GifTree from "components/GifTree.astro";
 ---
 
 <Layout title="Home">
@@ -15,13 +16,24 @@ import Fluff from "components/Fluff.astro";
 		<Fluff />
 	</div>
 
-	<p>Dreen is a graceful design language oriented to blog themes, personal websites, and small websites, etc.</p>
+	<div id="intro">
+		<GifTree />
+		<div style="margin: 5px;">
+			<p>Dreen is a graceful design language oriented for blog themes, personal websites, and tiny websites, etc.</p>
+		</div>
+	</div>
+
 	<p><strong>It's not for big and complicated web applications!</strong></p><br>
 
 	<p>This design is still being developed; if you love the face of it, I hope I can see you on <a target="_blank" href="https://github.com/zihan-ch/dreen">the Github repo of Dreen.</a></p>
 </Layout>
 
 <style>
+	* {
+		text-align: center;
+		align-items: center;
+	}
+
 	#hero {
 		display: flex;
 		align-items: center;
@@ -35,6 +47,11 @@ import Fluff from "components/Fluff.astro";
 
 	#big-logo * {
 		position: relative;
+	}
+
+	#intro {
+		display: flex;
+		margin-bottom: 7%;
 	}
 
 	p {
