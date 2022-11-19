@@ -1,4 +1,8 @@
 :root {
-	--sans: "Noto Sans", sans-serif;
+	--sans: 'M PLUS Rounded 1c', sans-serif;
 	--serif: "Noto Serif", serif;
+}
+
+span {
+	font-family: var(--sans) !important;
 }

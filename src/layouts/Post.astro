@@ -1,0 +1,19 @@
+---
+import { formatDate } from "lib/date";
+import Layout from "./Layout.astro";
+import "style/typography.css"
+
+const post = Astro.props.frontmatter || Astro.props
+
+const date = formatDate(post.pubDate)
+---
+
+<Layout>
+    <article>
+        <h1 id="post-title">{post.title}</h1>
+        <span>{date}, written by {post.author || 'Zihan Chen'}</span><br>
+        <span id="views"><script defer id="janalytics" define:vars={{ url: Astro.url }}>(async ()=>{const s=document.querySelector('script#janalytics');const r=await fetch("https://janalytics.zihan.ga/dreen/" + url);s.insertAdjacentText('afterend',await r.text());})()</script>&nbsp;views</span>
+
+        <slot />
+    </article>
+</Layout>

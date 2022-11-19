@@ -1,6 +1,7 @@
 ---
 import Card from "components/Card.astro";
 import Layout from "layouts/Layout.astro";
+import { formatDate } from "lib/date";
 import { getSortedPosts } from "lib/post";
 
 const posts = getSortedPosts(await Astro.glob("./post/*.md"))
@@ -9,9 +10,19 @@ const posts = getSortedPosts(await Astro.glob("./post/*.md"))
 <Layout title="Blog">
     <h1>Dreen blog</h1>
 
-    {posts.map((post) => (
-        <Card width="400px">
-           <a class="spec-a" href={post.url}><h2>{post.frontmatter.title}</h2></a>
-        </Card>
-    ))}
+    <div id="posts">
+        {posts.map((post) => (
+            <Card width="400px">
+            <a class="spec-a" href={post.url}><h2>{post.frontmatter.title}</h2></a>
+            <span>{formatDate(post.frontmatter.pubDate)}, written by {post.frontmatter.author || 'Zihan Chen'}</span>
+            <p>{post.frontmatter.description}</p>
+            </Card>
+        ))}
+    </div>
 </Layout>
+
+<style>
+    #posts {
+        display: flex;
+    }
+</style>

@@ -1,27 +1,32 @@
 @import "./fonts.css";
 @import "./colors.css";
+@import "./utils.css";
 
 a {
 	text-decoration: none;
 }
 
-main a {
-	color: var(--link-color);
-	transition: all 0.8s ease-out;
+main a.spec-a {
+	color: var(--title-color);
+	opacity: 1;
+	transition: all 0.6s ease-out;
 }
 
-main a:hover {
-	color: var(--link-color-hovering);
+main a.spec-a:hover {
+	opacity: 0.5;
 }
 
 main a:not(.spec-a) {
 	display: inline-block;
+	color: var(--link-color);
+	transition: all 0.8s ease-out;
 }
 
 main a:hover:not(.spec-a) {
 	transform: scale(1.1);
 	box-shadow: 0px 0px 40px 40px var(--gsl);
 	background-color: var(--gsl);
+	color: var(--link-color-hovering);
 }
 
 ::-webkit-scrollbar {
