@@ -4,10 +4,15 @@ import { Icon } from "astro-icon"
 ---
 
 <nav class="nav-not-hovering">
-	<div id="left-nav">
+	<div id="left-nav" class="flex">
 		<a href="/" class="nav-item">
 			<Logo size={40} />
 		</a>
+		<p class="nav-item" style="font-size: 1.3em; margin-left: -10px;">
+			<a href="/" class="nav-item" style="color: #081c15 !important;">
+				Dreen
+			</a>
+		</p>
 	</div>
 	<div id="right-nav">
 		<a class="nav-item" href="/blog">Blog</a>

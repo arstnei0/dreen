@@ -30,7 +30,7 @@ What is elegance? Is Material Design elegant? I don't know. But one thing I'm pr
 
 **Elegance often means simplicity and beauty**. What is beauty then? At least we know these are not beautiful:
 
-<div class="flex">
+<div class="flex wrap">
     <img src="/image/impossibly-ugly-mobile-app-designs.jpg" width="380" height="299" />
     <img src="/image/ebay-2003.jpg" width="380" height="299" />
 </div>
@@ -39,7 +39,7 @@ What are some problems of ugly web pages like the ones above? They all have a ba
 
 How about these ones?
 
-<div class="flex">
+<div class="flex wrap">
     <img src="/image/antfu-projects.png" width="380" height="299" />
     <img src="/image/miaoyan-home-cap.png" width="380" height="299" />
     <img src="/image/diu-home-cap.png" width="380" height="299" />
