@@ -4,3 +4,16 @@
 a {
     text-decoration: none;
 }
+
+main a {
+    display: inline-block;
+    color: var(--link-color);
+    transition: all 0.8s ease-out;
+}
+
+main a:hover {
+    color: var(--link-color-hovering);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 40px 40px var(--gsl);
+    background-color: var(--gsl);
+}

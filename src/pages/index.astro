@@ -7,21 +7,38 @@ import Fluff from "components/Fluff.astro";
 ---
 
 <Layout title="Home">
-	<div style="display: flex; align-items: center; justify-content: space-between;">
+	<div id="hero">
 		<div>
 			<img src="/big-logo.png" width="325" height="100" />
 			<h1>An elegant design.</h1>
 		</div>
 		<Fluff />
 	</div>
+
+	<p>Dreen is a graceful design language oriented to blog themes, personal websites, and small websites, etc.</p>
+	<p><strong>It's not for big and complicated web applications!</strong></p><br>
+
+	<p>This design is still being developed; if you love the face of it, I hope I can see you on <a target="_blank" href="https://github.com/zihan-ch/dreen">the Github repo of Dreen.</a></p>
 </Layout>
 
 <style>
+	#hero {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 10%;
+	}
+	
 	#big-logo {
 		
 	}
 
 	#big-logo * {
 		position: relative;
+	}
+
+	p {
+		font-size: 1.35em;
+		line-height: 1.45;
 	}
 </style>

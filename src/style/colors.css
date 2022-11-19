@@ -4,4 +4,7 @@
     --gm: #bfd8bdff; /* Green medium */
     --gd: #98c9a3ff; /* Green dark */
     --gsd: #77bfa3ff; /* Green super dark */
+    --bg-color: rgba(250, 235, 215, 0.2);
+    --link-color: #31572cdd;
+    --link-color-hovering: #132a13;
 }
