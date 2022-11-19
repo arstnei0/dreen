@@ -1,0 +1,17 @@
+---
+import Card from "components/Card.astro";
+import Layout from "layouts/Layout.astro";
+import { getSortedPosts } from "lib/post";
+
+const posts = getSortedPosts(await Astro.glob("./post/*.md"))
+---
+
+<Layout title="Blog">
+    <h1>Dreen blog</h1>
+
+    {posts.map((post) => (
+        <Card width="400px">
+           <a class="spec-a" href={post.url}><h2>{post.frontmatter.title}</h2></a>
+        </Card>
+    ))}
+</Layout>

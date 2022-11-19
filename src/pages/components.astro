@@ -1,10 +1,28 @@
 ---
-import Card from "components/Card.astro";
-import Layout from "layouts/Layout.astro";
-
+import Button from "components/Button.astro"
+import Card from "components/Card.astro"
+import Layout from "layouts/Layout.astro"
 ---
 
 <Layout title="Components">
-    <Card><h1>Card</h1></Card>
-</Layout>
+	<h1>Components:</h1>
+	<h2>Card:</h2>
+	<Card width="400px">
+		<img slot="image" src="/eg-blog-image.avif" width="400px" />
+		<span style="">10th Oct 2022</span>
+		<a class="spec-a" href="#">
+			<h2>How to position your furniture for positivity</h2>
+		</a>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+			dolores, possimus pariatur animi temporibus nesciunt praesentium
+			dolore sed nulla
+		</p>
+	</Card>
 
+	<h2>Button:</h2>
+	<Button>Greet</Button>
+
+	<h2>Typography:</h2>
+	<a href="/blog">See the blog to check the typography.</a>
+</Layout>

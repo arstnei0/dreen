@@ -1,5 +1,5 @@
 ---
-import Header from "components/Header.astro";
+import Header from "components/Header.astro"
 import "../style/global.css"
 export interface Props {
 	title?: string
@@ -25,21 +25,21 @@ const { title } = Astro.props
 		/>
 	</head>
 	<body>
-		<Header></Header>
+		<Header />
 		<main class="a-not-hovering">
 			<slot />
 		</main>
 
 		<script defer>
-			const links = [...document.getElementsByTagName('a')]
-			const mainEl = document.getElementsByTagName('main')[0]
-			links.forEach(link => {
-				link.addEventListener('mouseenter', () => {
-					mainEl.classList.replace('a-not-hovering', 'a-hovering')
+			const links = [...document.getElementsByTagName("a")]
+			const mainEl = document.getElementsByTagName("main")[0]
+			links.forEach((link) => {
+				link.addEventListener("mouseenter", () => {
+					mainEl.classList.replace("a-not-hovering", "a-hovering")
 				})
 
-				link.addEventListener('mouseleave', () => {
-					mainEl.classList.replace('a-hovering', 'a-not-hovering')
+				link.addEventListener("mouseleave", () => {
+					mainEl.classList.replace("a-hovering", "a-not-hovering")
 				})
 			})
 		</script>

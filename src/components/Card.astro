@@ -1,33 +1,62 @@
 ---
 export interface Props {
-    width?: string | number
+	width?: string
 }
 
-const {
-    width = '200px',
-} = Astro.props
+const { width = "200px" } = Astro.props
+
+const hasImage = Astro.slots.has("image")
 ---
 
-<div class="card">
-    <slot />
+<div class="card" class:list={hasImage ? ["has-image"] : []}>
+	{
+		hasImage && (
+			<div class="card-image">
+				<slot name="image" />
+			</div>
+		)
+	}
+	<div class="card-body">
+		<slot />
+	</div>
 </div>
 
 <style define:vars={{ width }}>
-    .card {
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        box-shadow: 15px 28px 25px -18px rgb(0 0 0 / 20%);
-        border-radius: 10px;
-        transition: all 450ms ease 0s;
-        background: linear-gradient(-30deg, rgba(250, 235, 215, 0.05), rgba(250, 235, 215, 0.45));
-        width: var(--width);
-    }
+	.card {
+		padding-bottom: 5px;
+		box-shadow: 15px 28px 25px -18px rgb(0 0 0 / 20%);
+		border-radius: 10px;
+		transition: all 450ms ease 0s;
+		background: linear-gradient(
+			-40deg,
+			rgba(250, 235, 215, 0.05),
+			rgba(250, 235, 215, 0.327)
+		);
+		width: var(--width);
+		overflow: hidden;
+	}
 
-    .card:hover {
-        box-shadow: 2px 8px 8px -5px rgb(0 0 0 / 30%);
-        transform: translate3d(0, 2px, 0);
-        background: linear-gradient(-10deg, rgba(250, 235, 215, 0), rgba(250, 235, 215, 0.5));
-    }
+	.card-image {
+		transition: all 1s ease-out;
+	}
+
+	.card:hover .card-image {
+		filter: hue-rotate(180deg) contrast(1.4);
+	}
+
+	.card:hover {
+		box-shadow: 2px 8px 8px -5px rgb(0 0 0 / 30%);
+		transform: translate3d(0, 2px, 0);
+		background: linear-gradient(
+			-20deg,
+			rgba(250, 235, 215, 0),
+			rgba(250, 235, 215, 0.45)
+		);
+	}
+
+	.card-body {
+		padding-left: 1em;
+		padding-right: 1em;
+		padding-top: 5px;
+	}
 </style>

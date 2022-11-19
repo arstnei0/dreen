@@ -2,26 +2,50 @@
 ---
 
 <button class="button">
-    <slot />
+	<slot />
 </button>
 
 <style>
-    .button {
-        all: unset;
-        padding: 0.6em;
-        box-shadow: 8px 8px 8px -8px var(--cambridge-blue);
-        border-radius: 0.5em;
-        transition: all 235ms ease 0s;
-        font-family: var(--sans);
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-        font-size: 1.3em;
-    }
+	.button {
+		position: relative;
+		z-index: 1;
+		all: unset;
+		padding: 0.6em;
+		box-shadow: 8px 8px 8px -8px var(--cambridge-blue);
+		border-radius: 0.5em;
+		transition: all 235ms ease 0s, background-image 0.5s linear;
+		font-family: var(--sans);
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+		font-size: 1.3em;
+		background-image: linear-gradient(
+			-40deg,
+			rgba(250, 235, 215, 0.05),
+			rgba(250, 235, 215, 0.327)
+		);
+	}
 
-    .button:hover {
-        box-shadow: 2px 8px 8px -5px var(--cambridge-blue);
-        transform: translate3d(0, 2px, 0);
-        background-color: #bfd8bd22;
-    }
+	.button:hover {
+		box-shadow: 2px 8px 8px -5px var(--cambridge-blue);
+		transform: translate3d(0, 2px, 0);
+		background-color: #bfd8bd22;
+	}
+
+	.button::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: linear-gradient(180deg, #bfd8bd81, #bfd8bd29);
+		z-index: -1;
+		transition: opacity 0.5s linear;
+		opacity: 0;
+	}
+
+	.button:hover::before {
+		opacity: 1;
+	}
 </style>
