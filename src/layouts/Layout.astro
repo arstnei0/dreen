@@ -2,7 +2,10 @@
 import Header from "components/Header.astro"
 import "../style/global.css"
 export interface Props {
-	title?: string
+	title?: string,
+	description?: string,
+	author?: string,
+	keywords?: string[],
 }
 
 const { title } = Astro.props
@@ -13,33 +16,63 @@ const { title } = Astro.props
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		{
+			Astro.props.author && (
+				<meta name="author" content={Astro.props.author} />
+			)
+		}
+		{
+			Astro.props.keywords && (
+				<meta
+					name="keywords"
+					content={Astro.props.keywords.join(", ")}
+				/>
+			)
+		}
+		{
+			Astro.props.description && (
+				<meta name="description" content={Astro.props.description} />
+			)
+		}
 		<title>{title ? `${title} ☘️ Dreen` : `Dreen`}</title>
 
+		<script is:inline>
+			if (!localStorage.getItem("mode"))
+				localStorage.setItem("mode", "system")
+
+			const mode = localStorage.getItem("mode")
+			let modeClassName
+
+			if (mode === "system")
+				modeClassName =
+					globalThis.matchMedia &&
+					globalThis.matchMedia("(prefers-color-scheme: dark)")
+						.matches
+						? "dark"
+						: "light"
+			else if (mode === "dark") modeClassName = "dark"
+			else modeClassName = "light"
+
+			modeClassName &&
+				document.documentElement.classList.add(modeClassName)
+
+			globalThis.dreen = { mode }
+		</script>
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<link
+			href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<Header />
-		<main class="a-not-hovering">
+		<main>
 			<slot />
 		</main>
-
-		<script defer>
-			const links = [...document.getElementsByTagName("a")]
-			const mainEl = document.getElementsByTagName("main")[0]
-			links.forEach((link) => {
-				link.addEventListener("mouseenter", () => {
-					mainEl.classList.replace("a-not-hovering", "a-hovering")
-				})
-
-				link.addEventListener("mouseleave", () => {
-					mainEl.classList.replace("a-hovering", "a-not-hovering")
-				})
-			})
-		</script>
 	</body>
 </html>
 
@@ -61,9 +94,9 @@ const { title } = Astro.props
 	}
 
 	@media (orientation: portrait) {
-        html {
+		html {
 			margin-left: 2%;
 			margin-right: 2%;
 		}
-    }
+	}
 </style>

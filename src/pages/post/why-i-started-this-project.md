@@ -11,10 +11,11 @@ Also, I found some personal websites that really attracted me due to their grace
 Therefore, I decided to create my own design.
 
 ## How I started
+
 Certainly, I chose [Astro](https://astro.build) as the main tool to build the design website. There are three main reasons why I chose Astro:
 
 1. Astro is the fastest SSG. It's both friendly for developers and for SEO.
-2. The [Astro component](https://docs.astro.build/en/core-concepts/astro-components/) is fairly easy to read. You can migrate the code from dreen to your own tool such as Hexo or Hugo easily. 
+2. The [Astro component](https://docs.astro.build/en/core-concepts/astro-components/) is fairly easy to read. You can migrate the code from dreen to your own tool such as Hexo or Hugo easily.
 3. I'm using Astro as the main tool of my personal website.✌️
 
 The tool I used doesn't really matter.
@@ -22,6 +23,7 @@ The tool I used doesn't really matter.
 I simply created a repo on Github. I hope you can star on [Github](https://github.com/zihan-ch/dreen) if you like this theme. I may release something after Dreen is mature enough to face the public.
 
 ## Its design
+
 As you know, the main aim of Dreen is all about elegance. I wanted to make it simple and minimal. However, I attempted to make my personal website simple but I failed. I can't guarantee Dreen is going to be minimal.
 
 What is elegance? Is Material Design elegant? I don't know. But one thing I'm pretty sure about is that Material Design, Ant design or any other mainstream design languages are not aimed for elegance. How can you just make a complicated web application elegant?
@@ -29,18 +31,18 @@ What is elegance? Is Material Design elegant? I don't know. But one thing I'm pr
 **Elegance often means simplicity and beauty**. What is beauty then? At least we know these are not beautiful:
 
 <div class="flex">
-    <img src="/impossibly-ugly-mobile-app-designs.jpg" width="380" height="299" />
-    <img src="/ebay-2003.jpg" width="380" height="299" />
+    <img src="/image/impossibly-ugly-mobile-app-designs.jpg" width="380" height="299" />
+    <img src="/image/ebay-2003.jpg" width="380" height="299" />
 </div>
 
-What are some problems of ugly web pages like the ones above? They all have a bad font. They are using complex and useless images. Their color palettes aren't nice. They are all showing millions of words in one page even though most of them are not important and users rarely need them. The most important part of the whole page is not big and obvious enough. 
+What are some problems of ugly web pages like the ones above? They all have a bad font. They are using complex and useless images. Their color palettes aren't nice. They are all showing millions of words in one page even though most of them are not important and users rarely need them. The most important part of the whole page is not big and obvious enough.
 
 How about these ones?
 
 <div class="flex">
-    <img src="/antfu-projects.png" width="380" height="299" />
-    <img src="/miaoyan-home-cap.png" width="380" height="299" />
-    <img src="/diu-home-cap.png" width="380" height="299" />
+    <img src="/image/antfu-projects.png" width="380" height="299" />
+    <img src="/image/miaoyan-home-cap.png" width="380" height="299" />
+    <img src="/image/diu-home-cap.png" width="380" height="299" />
 </div>
 
 I love it too much. I can't get rid of it.
@@ -60,6 +62,7 @@ I love modern effects. I like to use many weird and cool effects on my website. 
 More details about Dreen's design may be written after I made them out.
 
 ## Open source
-To tell you the truth, I was so surprised when I can't find any elegant design language. If you are also a minimalist, a person who love elegance or even a stranger who just like the appearance of this web page, I'm happy if you can join Dreen and contribute to this graceful theme. 
+
+To tell you the truth, I was so surprised when I can't find any elegant design language. If you are also a minimalist, a person who love elegance or even a stranger who just like the appearance of this web page, I'm happy if you can join Dreen and contribute to this graceful theme.
 
 Bye there~
