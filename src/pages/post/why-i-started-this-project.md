@@ -1,6 +1,7 @@
 ---
 title: Why I started this project
 description: About the reason why I started the project Dreen and my actual objective.
+pubDate: 2022/11/19
 layout: layouts/Post.astro
 ---
 
