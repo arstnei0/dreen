@@ -1,0 +1,20 @@
+---
+import Button from "components/Button.astro"
+import Layout from "layouts/Layout.astro"
+---
+
+<Layout>
+	<div class="center">
+		<div class="flex-br"><img id="404-image" height="500" /></div>
+		<h1 class="flex-br">404 Not found!</h1>
+
+		<div><Button href="/">Go back to home</Button></div>
+	</div>
+
+	<script>
+		const num = Math.floor(Math.random() * 20) + 1
+		const imageUrl = `/image/404/${num}.png`
+
+		;(document.getElementById("404-image") as any).src = imageUrl
+	</script>
+</Layout>

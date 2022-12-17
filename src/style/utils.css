@@ -2,6 +2,18 @@
 	display: flex;
 }
 
+.flex-br {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
 .wrap {
 	flex-wrap: wrap;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	flex-flow: wrap;
 }

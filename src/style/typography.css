@@ -8,30 +8,78 @@ article li {
 	font-size: 1.25rem;
 }
 
-#post-title {
+article h1 {
 	font-size: 2.3rem;
 }
 
-article h1 {
-	font-size: 2rem;
-}
-
 article h2 {
-	font-size: 1.8rem;
+	font-size: 1.95rem;
 }
 
 article h3 {
-	font-size: 1.65rem;
+	font-size: 1.75rem;
 }
 
 article h4 {
-	font-size: 1.5rem;
+	font-size: 1.6rem;
 }
 
 article h5 {
-	font-size: 1.35rem;
+	font-size: 1.4rem;
 }
 
 article h6 {
 	font-size: 1.3rem;
+}
+
+.astro-code {
+	padding: 0.7em;
+	border-radius: 0.6em;
+	padding-left: 1.2em;
+}
+
+.astro-code * {
+	font-family: var(--mono) !important;
+}
+
+blockquote {
+	border-left: 0.4em solid rgb(88, 61, 42);
+	border-radius: 0.2em;
+	padding-left: 1em;
+	margin-left: 1em;
+}
+
+p code,
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	--border-radius: 0.4em;
+	--padding-block: 0.2em;
+	--padding-inline: 0.5em;
+	padding: var(--padding-block) var(--padding-inline);
+	margin: calc(var(--padding-block) * -1) 0;
+	border-radius: var(--border-radius);
+	word-break: break-word;
+	background-color: var(--code-inline-bg-color);
+}
+
+table {
+	--border-color: #cdcab2e8;
+	border-radius: 0.5em;
+	width: 100%;
+}
+
+td,
+th {
+	padding: 0.4em;
+	border: 0.2em solid var(--border-color);
+	border-radius: 0.4em;
+}
+
+hr {
+	margin-top: 3em;
+	margin-bottom: 3em;
 }

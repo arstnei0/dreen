@@ -1,9 +1,10 @@
-@import "./fonts.css";
 @import "./colors.css";
 @import "./utils.css";
+@import "./variables.css";
 
 a {
 	text-decoration: none;
+	color: var(--link-color);
 }
 
 main a.spec-a {
@@ -16,15 +17,14 @@ main a.spec-a:hover {
 	opacity: 0.5;
 }
 
-main a:not(.spec-a) {
+main a:not(.spec-a):not(.spec) {
 	display: inline-block;
-	color: var(--link-color);
 	transition: all 0.8s ease-out;
 }
 
-main a:hover:not(.spec-a) {
-	transform: scale(1.1);
-	box-shadow: 0px 0px 40px 40px var(--gsl);
+main a:hover:not(.spec-a):not(.spec) {
+	transform: scale(1.05);
+	box-shadow: 0px 0px 20px 20px var(--gsl);
 	background-color: var(--gsl);
 	color: var(--link-color-hovering);
 }
